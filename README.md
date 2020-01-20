@@ -12,7 +12,7 @@ Example of the input that could be given and how does it look:
 <img src="https://i.imgur.com/lLRIG8C.png" width="900" title="Pieces">
 
 #### Approach:
-First of all, it took a while for me to actually understand what is required to do.
+First of all, it took quite a while for me to actually understand what is required to do.
 Once I've got the abstract picture and the purpose of this project I started googling about the disjoint path finding algorithms. I found myself interested in the **Bhandari** algorithm (modification of Suurballe), which, to my opinion, had the similar time-cost with its former algorithm, but was much simplier to implement in code.
 Once everything was done, even though the time efficiency was quite decent, I wanted to upgrade the way we store and access our data.
 
