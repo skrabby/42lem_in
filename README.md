@@ -52,7 +52,7 @@ make && make visual && ./lem_in < maps/felixmap.map | ./visual/visual
 
 #### Afterword:
 
-It was incredibly challenging and interesting to do this project. In comparison with previous projects, me and my colleague this time did our best not just to make the programm work ignoring the efficiency cost, but rather make it work as fast as possible. Many things were changed throughout the process, including the parsing process, algorithm implementation, and the way we stored and accessed the data.
+It was incredibly challenging and interesting to do this project. In comparison with previous projects, me and my colleague this time did our best not just to make the program work ignoring the efficiency cost, but rather make it work as fast as possible. Many things were changed throughout the process, including the parsing process, algorithm implementation, and the way we stored and accessed the data.
 
 #### Credits:
 
