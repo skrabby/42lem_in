@@ -26,7 +26,7 @@ In a nutshell, Bhandari algorithm requires us to do the following:
 3) Find the shortest path in a new graph, return the previous shortest path to the graph and eliminate their intersections. Those steps have to be repeated as long as there are available paths.
 5) Eliminate all unused edges.
 
-This may sound a little confusing without a visual representation. Please, follow this link for a more dettailed explanation (http://www.macfreek.nl/memory/Disjoint_Path_Finding)
+This may sound a little confusing without a visual representation. Please, follow [this link](http://www.macfreek.nl/memory/Disjoint_Path_Finding) for a more dettailed explanation 
 Once the graph is updated, you can finally find your solution paths and lead your ants to their homes safe and sound :)
 
 #### Bonus:
