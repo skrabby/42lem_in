@@ -41,7 +41,7 @@ Without visualizer:
 make && ./lem_in < maps/felixmap.map 
 ```
 
-With visualizer:
+With visualizer (minilibx supports only MacOS):
 ```shell
 make && make visual && ./lem_in < maps/felixmap.map | ./visual/visual
 ```
