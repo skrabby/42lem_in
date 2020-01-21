@@ -4,8 +4,7 @@
 For this specific project only those functions were allowed:
 read, write, malloc, free, perror. Memory leaks, "for" loops, > 25 line functions as well as complicated ternary operations (ternary inside ternary) are prohibited, makefile has to be linked and smooth.
 
-#### Task:
-[link]
+#### Task: [Lem-in](https://github.com/skrabby/42lem_in/blob/master/lem-in.en.pdf)
 
 Example of the input that could be given and how does it look:
 
