@@ -38,12 +38,12 @@ As for the bonus part, it was proposed to create a visualizer.
 
 Without visualizer:
 ```shell
-make && ./lem_in < maps/felixmap.map 
+make && ./lem-in < maps/felixmap
 ```
 
 With visualizer (minilibx supports only MacOS):
 ```shell
-make && make visual && ./lem_in < maps/felixmap.map | ./visual/visual
+make && make visual && ./lem-in < maps/felixmap | ./visual/visual
 ```
 
 #### Example with visualizer
