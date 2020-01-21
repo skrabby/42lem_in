@@ -16,7 +16,7 @@ First of all, it took quite a while for me to actually understand what is requir
 Once I've got the abstract picture and the purpose of this project I started googling about the disjoint path finding algorithms. I found myself interested in the **Bhandari** algorithm (modification of Suurballe), which, to my opinion, had the similar time-cost with its former algorithm, but was much simplier to implement in code.
 Once everything was done, even though the time efficiency was quite decent, I wanted to upgrade the way we store and access our data.
 
-Initially, we did not store our nodes in a list, but rather in an array of pointers and it was available to access to them through their indexes. But that, actually, did not benefit us much as we still have to iterate through them during the parsing process in order to link them with each other. It is quite painful to do, that is why we have implemented a **Hashtable**, which has significatly improved the searching process, and decided to arrange a gap of 100 cells for each node to reduce the number of possible collisions.
+Initially, we did not store our nodes in a list, but rather in an array of pointers and it was available to access them through their indexes. But that, actually, did not benefit us much as we still have to iterate through them during the parsing process in order to link them with each other. It is quite painful to do, that is why we have implemented a **Hashtable**, which has significatly improved the searching process, and decided to arrange a gap of 100 cells for each node to reduce the number of possible collisions.
 
 #### Algorithm:
 In a nutshell, Bhandari algorithm requires us to do the following:
