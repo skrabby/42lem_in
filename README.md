@@ -56,4 +56,4 @@ It was incredibly challenging and interesting to do this project. In comparison 
 
 #### Credits:
 
-Many thanks to [Eviber](https://github.com/Eviber) for sharing his lem-in visualization in Youtube, which had greatly assisted me in understanding this project, and for a pack of useful and interesting maps. And, of course, my homie and partner in this project [zloirucar](https://github.com/zloirucar/).
+Many thanks to [Eviber](https://github.com/Eviber) for sharing his lem-in visualization in Youtube, which had greatly assisted me in understanding this project, and for a pack of useful and interesting maps. And, of course, to my homie and partner in this project [zloirucar](https://github.com/zloirucar/).
