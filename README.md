@@ -6,7 +6,7 @@ read, write, malloc, free, perror. Memory leaks, "for" loops, > 25 line function
 
 #### Task: [Lem-in](https://github.com/skrabby/42lem_in/blob/master/lem-in.en.pdf)
 
-Example of the input that could be given and how does it look:
+Example of the input that could be given and how does the graph look:
 
 <img src="https://i.imgur.com/lLRIG8C.png" width="900" title="Pieces">
 
