@@ -43,7 +43,7 @@ t_vis		*set_var(t_map *map)
 	v->padding_y = 0;
 	v->start_room_ants = map->count;
 	v->end_room_ants = 0;
-	v->visu_speed = 3;
+	v->visu_speed = 15;
 	v->pause = 0;
 	v->trim_x0 = WIDTH;
 	v->trim_x1 = 0;
