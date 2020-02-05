@@ -65,32 +65,22 @@ void			update_map(t_map *map)
 	}
 }
 
-void			print_shortest(t_path *list)
-{
-	t_path *tmp;
-
-	if (!list)
-		return ;
-	tmp = list;
-	while (tmp)
-		tmp = tmp->next;
-}
-
 void			return_neib(t_map *map)
 {
-	t_finpaths *tmp;
-
+	t_finpaths	*tmp;
+	t_path		*path;
 	tmp = map->rev_paths;
 	while (tmp)
 	{
-		while (tmp->path->next)
+		path = tmp->path;
+		while (path->next)
 		{
-			tmp->path->cell->next_neib =
-			neib_addlast(tmp->path->cell->next_neib,
-			tmp->path->next->cell->index);
-			revert_weights(map, tmp->path->next->cell->next_neib,
-			tmp->path->cell->name);
-			tmp->path = tmp->path->next;
+			path->cell->next_neib =
+			neib_addlast(path->cell->next_neib,
+			path->next->cell->index);
+			revert_weights(map, path->next->cell->next_neib,
+			path->cell->name);
+			path = path->next;
 		}
 		tmp = tmp->next;
 	}
