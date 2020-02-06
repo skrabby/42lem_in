@@ -24,7 +24,7 @@ int	main(void)
 	ft_putchar('\n');
 	map->start = search_cell(map, map->start_str);
 	map->end = search_cell(map, map->end_str);
-/*	t_cell *temp = map->cells;
+	t_cell *temp = map->cells;
 	t_neib *teemp;
 	while (temp)
 	{
@@ -37,9 +37,9 @@ int	main(void)
 		}
 		printf("\n");
 		temp = temp->next;
-	}*/
+	}
 	bhandari_algo(map);
-	/*t_path *tmp;
+	t_path *tmp;
 	while (map->paths)
 	{
 		tmp = map->paths->path;
@@ -75,7 +75,7 @@ int	main(void)
 		}
 		printf("\n");
 		temp = temp->next;
-	}*/
+	}
 	if (map->paths)
 		ant_cross(map, map->count);
 	else
