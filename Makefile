@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: oelaina <oelaina@student.42.fr>            +#+  +:+       +#+         #
+#    By: skrabby <skrabby@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/05 11:23:44 by skrabby           #+#    #+#              #
-#    Updated: 2020/01/18 22:57:32 by oelaina          ###   ########.fr        #
+#    Updated: 2020/02/07 04:46:28 by skrabby          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,8 @@ SRCS = main \
 	   path \
 	   finpath \
 	   dijkstra \
-	   hashtable
+	   hashtable \
+	   optimal_path \
 
 HEADER = 	-I./include \
 			-I./lib/libft/ \
