@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "lem_in.h"
-#include <stdio.h>
 
 int		count_finpaths(t_finpaths *lst)
 {
@@ -40,7 +39,7 @@ int		count_path(t_path *lst)
 		tmp = tmp->next;
 		count++;
 	}
-	return (count);
+	return (count > 0 ? count - 1 : 0);
 }
 
 int		check(t_finpaths *paths, int i)
@@ -102,58 +101,7 @@ int	main(void)
 	ft_putchar('\n');
 	map->start = search_cell(map, map->start_str);
 	map->end = search_cell(map, map->end_str);
-	/*t_cell *temp = map->cells;
-	t_neib *teemp;
-	while (temp)
-	{
-		printf("CELL:%s\n", temp->name);
-		teemp = temp->next_neib;
-		while(teemp)
-		{
-			printf("NEIB:%s\n", map->arr_cell[teemp->index]->key);
-			teemp = teemp->next;
-		}
-		printf("\n");
-		temp = temp->next;
-	}*/
 	bhandari_algo(map);
-	/*t_path *tmp;
-	while (map->paths)
-	{
-		tmp = map->paths->path;
-		while (tmp)
-		{
-			printf("ROUTE: %s\n", tmp->cell->name);
-			tmp = tmp->next;
-		}
-		printf("NEXT\n");
-		map->paths = map->paths->next;
-	}
-	t_path *teeemp;
-	while (map->rev_paths)
-	{
-		teeemp = map->rev_paths->path;
-		while (teeemp)
-		{
-			ft_printf("DEL: %s\n", teeemp->cell->name);
-			teeemp = teeemp->next;
-		}
-		printf("REV\n");
-		map->rev_paths = map->rev_paths->next;
-	}
-	temp = map->cells;
-	while (temp)
-	{
-		printf("CELL:%s\n", temp->name);
-		teemp = temp->next_neib;
-		while(teemp)
-		{
-			printf("NEIB:%s\n", map->arr_cell[teemp->index]->key);
-			teemp = teemp->next;
-		}
-		printf("\n");
-		temp = temp->next;
-	}*/
 	if (map->paths)
 		ant_cross(map, map->count, optimal_paths(map->paths, map->count));
 	else

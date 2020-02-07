@@ -64,8 +64,6 @@ t_path	*revert_path(t_path *path)
 	return (prev);
 }
 
-#include <stdio.h>
-
 void	delete_path(t_map *map)
 {
 	t_path *tmp;

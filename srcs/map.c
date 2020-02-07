@@ -102,7 +102,6 @@ t_map	*init_map(void)
 	map->edges = NULL;
 	map->solution = NULL;
 	map->cells = NULL;
-	map->crossed = 0;
 	map->count_end_ant = 0;
 	map->end = 0;
 	map->start = 0;

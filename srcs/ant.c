@@ -33,11 +33,7 @@ t_path **prev, t_path **cur, t_map **map)
 			if ((*prev)->cell->ant != 0)
 			{
 				if ((*cur)->next == NULL)
-				{
 					(*map)->count_end_ant += 1;
-					if ((*map)->count_end_ant == (*map)->count)
-						(*map)->crossed = 1;
-				}
 			}
 			(*cur)->cell->ant = (*prev)->cell->ant;
 		}
@@ -94,17 +90,20 @@ int ants, int opsize)
 {
 	int			count;
 	int			i;
+	int			maxop;
 	t_finpaths	*cur;
 
 	map->newline = 1;
 	cur = map->paths;
 	count = 1;
-	while (count <= ants || !map->crossed)
+	maxop = opsize;
+	while (map->count_end_ant != map->count)
 	{
 		i = 0;
-		while (cur && i++ < opsize)
+		opsize = optimal_paths(map->paths, ants - count + 1);
+		while (cur && i < maxop)
 		{
-			if (count <= ants)
+			if (i < opsize)
 			{
 				move_ant(map, cur, count, &(map->newline));
 				count++;
@@ -112,6 +111,7 @@ int ants, int opsize)
 			else
 				move_ant(map, cur, 0, &(map->newline));
 			cur = cur->next;
+			i++;
 		}
 		ft_putchar('\n');
 		cur = map->paths;

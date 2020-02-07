@@ -141,7 +141,6 @@ typedef	struct			s_map
 	t_hashtable			**arr_cell;
 	t_edge				*edges;
 	t_solution			*solution;
-	int					crossed;
 	char				*start_str;
 	char				*end_str;
 	unsigned long		start;
@@ -205,6 +204,7 @@ void					save_paths(t_map *map);
 t_finpaths				*paths_addlast(t_finpaths *list, t_path *new_path);
 t_finpaths				*init_finpaths(void);
 void					delete_path(t_map *map);
+int						count_path(t_path *lst);
 /*
 ** edges
 */
