@@ -13,6 +13,84 @@
 #include "lem_in.h"
 #include <stdio.h>
 
+int		count_finpaths(t_finpaths *lst)
+{
+	int count;
+	t_finpaths *tmp;
+
+	tmp = lst;
+	count = 0;
+	while (tmp)
+	{
+		tmp = tmp->next;
+		count++;
+	}
+	return (count);
+}
+
+int		count_path(t_path *lst)
+{
+	int count;
+	t_path *tmp;
+
+	tmp = lst;
+	count = 0;
+	while (tmp)
+	{
+		tmp = tmp->next;
+		count++;
+	}
+	return (count);
+}
+
+int		check(t_finpaths *paths, int i)
+{
+	int			result;
+	int			cursteps;
+	int			j;
+	t_finpaths	*cur;
+
+	j = 0;
+	result = 0;
+	cur = paths;
+	while (j++ < i)
+		cur = cur->next;
+	cursteps = count_path(cur->path);
+	while (i > 0)
+	{
+		cur = paths;
+		j = 0;
+		i--;
+		while (j++ < i)
+			cur = cur->next;
+		result += cursteps - count_path(cur->path);
+	}
+	return (result);
+}
+
+int		optimal_paths(t_finpaths *paths, int ants)
+{
+	int		i;
+	int		opsize;
+	int		size;
+	i = 0;
+	opsize = 0;
+	size = count_finpaths(paths);
+	if (size == 1)
+		return (1);
+	while (i < size)
+	{
+		if (ants > check(paths, i))
+			opsize++;
+		else
+			break ;
+		i++;
+		ants--;
+	}
+	return (opsize);
+}
+
+
 int	main(void)
 {
 	t_map *map;
@@ -24,7 +102,7 @@ int	main(void)
 	ft_putchar('\n');
 	map->start = search_cell(map, map->start_str);
 	map->end = search_cell(map, map->end_str);
-	t_cell *temp = map->cells;
+	/*t_cell *temp = map->cells;
 	t_neib *teemp;
 	while (temp)
 	{
@@ -37,9 +115,9 @@ int	main(void)
 		}
 		printf("\n");
 		temp = temp->next;
-	}
+	}*/
 	bhandari_algo(map);
-	t_path *tmp;
+	/*t_path *tmp;
 	while (map->paths)
 	{
 		tmp = map->paths->path;
@@ -75,9 +153,9 @@ int	main(void)
 		}
 		printf("\n");
 		temp = temp->next;
-	}
+	}*/
 	if (map->paths)
-		ant_cross(map, map->count);
+		ant_cross(map, map->count, optimal_paths(map->paths, map->count));
 	else
 		error_msg();
 	return (0);

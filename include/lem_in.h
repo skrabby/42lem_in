@@ -38,11 +38,11 @@ typedef	struct			s_neib
 **
 ** index - index in arr_cell
 **
-** ant - the index of an ant wchich
-** is located in the cell (if start/end cell then the count of ants)
+** ant - the index of an ant which
+** is located in the cell (if start/end cell, then the count of ants)
 **
 ** next_neib - the list of nodes' neighbors,
-** i. e. other nodes, which our node is connect to
+** i. e. other nodes, which our node is connected to
 */
 typedef	struct			s_cell
 {
@@ -223,9 +223,10 @@ int						visit_node(t_map *map, t_cell *prev_node,
 /*
 **ants
 */
+int						optimal_paths(t_finpaths *paths, int ants);
 void					move_ant(t_map *map, t_finpaths *path,
 						int ant_index, int *newline);
-void					ant_cross(t_map *map, int ants);
+void					ant_cross(t_map *map, int ants, int opsize);
 /*
 **bhandari
 */

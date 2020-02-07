@@ -90,19 +90,19 @@ t_finpaths *path, int ant_index, int *newline)
 }
 
 void			ant_cross(t_map *map,
-int ants)
+int ants, int opsize)
 {
 	int			count;
-	t_finpaths	*begin;
+	int			i;
 	t_finpaths	*cur;
 
 	map->newline = 1;
-	begin = map->paths;
-	cur = begin;
+	cur = map->paths;
 	count = 1;
 	while (count <= ants || !map->crossed)
 	{
-		while (cur)
+		i = 0;
+		while (cur && i++ < opsize)
 		{
 			if (count <= ants)
 			{
@@ -114,7 +114,7 @@ int ants)
 			cur = cur->next;
 		}
 		ft_putchar('\n');
-		cur = begin;
+		cur = map->paths;
 		map->newline = 1;
 	}
 }

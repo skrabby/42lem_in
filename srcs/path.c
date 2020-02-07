@@ -75,7 +75,6 @@ void	delete_path(t_map *map)
 	unused = map->edges;
 	while (tmp)
 	{
-	//	printf("INTER: %s:%s\n", tmp->cell->name, tmp->next->cell->name);
 		tmp->cell->next_neib =
 		del_neib(map, tmp->cell->next_neib, tmp->next->cell->name);
 		tmp->next->cell->next_neib =
@@ -84,7 +83,6 @@ void	delete_path(t_map *map)
 	}
 	while (unused)
 	{
-	//	printf("UNUSED: %s:%s\n", unused->first_node->name, unused->second_node->name);
 		unused->first_node->next_neib =
 		del_neib(map, unused->first_node->next_neib, unused->second_node->name);
 		unused->second_node->next_neib =
